@@ -1,0 +1,13 @@
+site_name: I'm Yass, a girl
+site_description: Cosas que te ayudan a sobrevivir a la vida adulta
+
+theme:
+  name: material
+
+nav:
+  - Inicio: index.md
+  - Salud: salud/index.md
+  - Belleza y cosmética: belleza-cosmetica/index.md
+  - Ropa y zapatos: ropa-zapatos/index.md
+  - Leyes y finanzas: leyes-finanzas/index.md
+  - Hogar y lifestyle: hogar-lifestyle/index.md

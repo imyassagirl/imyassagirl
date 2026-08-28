@@ -4,6 +4,28 @@ site_description: Cosas que te ayudan a sobrevivir a la vida adulta
 theme:
   name: material
 
+  font:
+    text: Inter
+    code: JetBrains Mono
+    heading: Fraunces
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+
+extra_css:
+  - https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css
+  - stylesheets/extra.css
+
 nav:
   - Inicio: index.md
   - Salud: salud/index.md

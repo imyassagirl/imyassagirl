@@ -29,7 +29,21 @@ extra_css:
 nav:
   - Inicio: index.md
   - Salud: salud/index.md
-  - Belleza y cosmética: belleza-cosmetica/index.md
+  - Belleza y cosmética:
+      - Inicio: belleza-cosmetica/index.md
+      - Maquillaje:
+          - Teoría del maquillaje: belleza-cosmetica/maquillaje/maquillaje_teoria.md
+          - Reviews de productos de maquillaje que he usado: belleza-cosmetica/maquillaje/maquillaje_reviews.md
+          - Recopilación de productos de maquillaje: belleza-cosmetica/maquillaje/maquillaje_productos.md
+      - Skincare:
+          - Teoría del skincare: belleza-cosmetica/skincare/skincare_teoria.md
+          - Reviews de productos de skincare que he usado: belleza-cosmetica/skincare/skincare_reviews.md
+          - Recopilación de productos de skincare: belleza-cosmetica/skincare/skincare_productos.md
+      - Cabello:
+          - Teoría del cabello: belleza-cosmetica/cabello/cabello_teoria.md
+          - Reviews de productos de cabello que he usado: belleza-cosmetica/cabello/cabello_reviews.md
+          - Recopilación de productos de cabello: belleza-cosmetica/cabello/cabello_productos.md
   - Ropa y zapatos: ropa-zapatos/index.md
   - Leyes y finanzas: leyes-finanzas/index.md
   - Hogar y lifestyle: hogar-lifestyle/index.md
+  - Web: web/index.md

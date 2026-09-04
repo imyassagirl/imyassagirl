@@ -3,7 +3,7 @@
 :root {
   --iyg-primary: #5B2A4D;
   --iyg-accent: #C25B84;
-  --iyg-xp: #7C8B5B;
+  --iyg-sage: #9CAF88;
   --iyg-bg: #FBF6F2;
   --iyg-surface: #F1E4EC;
   --iyg-text: #2E2233;
@@ -102,9 +102,266 @@ body, .md-typeset {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 0.78rem;
-  color: var(--iyg-xp);
+  color: var(--iyg-sage);
 }
 
 .iyg-card:hover span {
   color: var(--iyg-bg);
+}
+
+/* =========================
+   TEXTO DE LOS ARTÍCULOS
+   ========================= */
+
+.md-typeset p,
+.md-typeset li {
+  text-align: justify;
+}
+
+/* Página de Belleza y cosmética */
+
+.beauty-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.beauty-intro {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 2.5rem;
+}
+
+.beauty-intro h1 {
+  margin-bottom: 0.7rem;
+}
+
+.beauty-intro p {
+  color: var(--iyg-text);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.beauty-sections {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.beauty-section-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 210px;
+  padding: 1.5rem;
+  background: var(--iyg-surface);
+  border: 1px solid rgba(91, 42, 77, 0.08);
+  border-radius: 18px;
+  text-align: center;
+  text-decoration: none !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.beauty-section-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(46, 34, 51, 0.08);
+}
+
+.beauty-section-card i {
+  font-size: 2rem;
+  color: var(--iyg-accent);
+  margin-bottom: 0.8rem;
+}
+
+.beauty-section-card h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.3rem;
+}
+
+.beauty-section-card p {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--iyg-text);
+}
+
+@media screen and (max-width: 700px) {
+  .beauty-sections {
+    grid-template-columns: 1fr;
+  }
+
+  .beauty-section-card {
+    min-height: 170px;
+  }
+}
+
+/* =========================
+   SUBPÁGINAS DE BELLEZA
+   ========================= */
+
+.beauty-subpage {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 1rem 3rem;
+}
+
+.back-arrow {
+  display: inline-block;
+  color: var(--iyg-primary);
+  font-size: 1.6rem;
+  line-height: 1;
+  text-decoration: none !important;
+  transition: transform 0.15s ease;
+}
+
+.back-arrow:hover {
+  transform: translateX(-4px);
+}
+
+.beauty-subsections {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.beauty-subsection-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 180px;
+  padding: 1.5rem;
+  background: var(--iyg-surface);
+  border: 1px solid rgba(91, 42, 77, 0.08);
+  border-radius: 18px;
+  text-align: center;
+  text-decoration: none !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.beauty-subsection-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(46, 34, 51, 0.08);
+}
+
+.beauty-subsection-card h2 {
+  margin: 0 0 0.7rem;
+  font-size: 1.15rem;
+}
+
+.beauty-subsection-card p {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--iyg-text);
+}
+
+@media screen and (max-width: 700px) {
+  .beauty-subsections {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   RECETAS
+   ========================= */
+
+.recipe-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.recipe-category-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.2rem 1.4rem;
+  background: var(--iyg-surface);
+  border: 1px solid rgba(91, 42, 77, 0.08);
+  border-radius: 14px;
+  text-decoration: none !important;
+  color: var(--iyg-text);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recipe-category-link:hover {
+  transform: translateX(4px);
+  box-shadow: 0 6px 18px rgba(46, 34, 51, 0.07);
+}
+
+.recipe-category-link span:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.recipe-category-link strong {
+  font-family: 'Fraunces', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--iyg-primary);
+}
+
+.recipe-category-link small {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: var(--iyg-text);
+}
+
+.recipe-arrow {
+  flex-shrink: 0;
+  font-size: 1.2rem;
+  color: var(--iyg-accent);
+}
+
+
+/* =========================
+   LISTAS DE RECETAS
+   ========================= */
+
+.recipe-list-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem 1rem 3rem;
+}
+
+.recipe-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(91, 42, 77, 0.12);
+}
+
+.recipe-list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0.4rem;
+  border-bottom: 1px solid rgba(91, 42, 77, 0.12);
+  color: var(--iyg-primary);
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  transition: padding-left 0.15s ease, color 0.15s ease;
+}
+
+.recipe-list a::after {
+  content: '→';
+  color: var(--iyg-accent);
+  transition: transform 0.15s ease;
+}
+
+.recipe-list a:hover {
+  padding-left: 0.8rem;
+  color: var(--iyg-accent);
+}
+
+.recipe-list a:hover::after {
+  transform: translateX(4px);
 }

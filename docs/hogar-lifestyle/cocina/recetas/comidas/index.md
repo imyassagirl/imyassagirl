@@ -12,6 +12,12 @@
   <div class="recipe-list">
 
     <!-- Las recetas irán aquí -->
+    <a href="albondigas_tomate/">Albóndigas con tomate</a>    
+    <a href="espaguetis_salma/">Espaguetis a la Salma</a>
+    <a href="pure_calabaza/">Puré de calabaza</a>
+    <a href="rollitos_primavera/">Rollitos de primavera</a>
+    <a href="verduras_horno/">Verduras al horno</a>
+    <a href="wok/">Wok de verduras</a>
 
   </div>
 

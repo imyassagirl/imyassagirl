@@ -13,6 +13,7 @@
 
     <!-- Las recetas irán aquí -->
     <a href="tarta_melocoton/">Tarta de melocotón</a>
+    <a href="bizcocho_yogur/">Bizcocho de yogur</a>
 
   </div>
 

@@ -18,6 +18,14 @@
       </p>
     </a>
 
+    <a class="beauty-section-card" href="ropa-zapatos/">
+      <h2>Ropa y zapatos</h2>
+      <p>
+        En qué fijarnos a la hora de comprar y qué marcas quiero probar.
+      </p>
+    </a>
+
+
   </div>
 
 </div>

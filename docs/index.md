@@ -19,11 +19,6 @@
     Belleza y cosmética
   </a>
 
-  <a class="iyg-card" href="ropa-zapatos/">
-    <i class="ti ti-shirt"></i>
-    Ropa y zapatos
-  </a>
-
   <a class="iyg-card" href="leyes-finanzas/">
     <i class="ti ti-scale"></i>
     Leyes y finanzas

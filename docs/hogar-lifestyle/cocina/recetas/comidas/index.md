@@ -14,6 +14,7 @@
     <!-- Las recetas irán aquí -->
     <a href="albondigas_tomate/">Albóndigas con tomate</a>    
     <a href="espaguetis_salma/">Espaguetis a la Salma</a>
+    <a href="espinacas_garbanzos/">Espinacas con garbanzos</a>
     <a href="pure_calabaza/">Puré de calabaza</a>
     <a href="rollitos_primavera/">Rollitos de primavera</a>
     <a href="verduras_horno/">Verduras al horno</a>

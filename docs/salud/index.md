@@ -18,7 +18,7 @@
       </p>
     </a>
 
-    <a class="beauty-section-card" href="Acné/">
+    <a class="beauty-section-card" href="acne/">
       <h2>Acné</h2>
       <p>
         Lo que he aprendido este año después de sufrirlo.

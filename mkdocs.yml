@@ -1,8 +1,10 @@
-site_name: I'm Yass, a girl
-site_description: Cosas que te ayudan a sobrevivir a la vida adulta
+site_name: I'm Yass a girl
+site_description: Recopilación de mis hiperfijaciones para que no se me olvide nada.
 
 theme:
   name: material
+  logo: assets/logo.png
+  language: es
 
   font:
     text: Inter
@@ -18,31 +20,31 @@ theme:
   features:
     - navigation.instant
     - navigation.tracking
+    - navigation.sections
+    - navigation.expand
     - navigation.top
     - search.highlight
     - content.code.copy
+
 
 extra_css:
   - https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css
   - stylesheets/extra.css
 
+extra_javascript:
+  - javascripts/extra.js
+
 nav:
   - Inicio: index.md
   - Salud: salud/index.md
-  - Belleza y cosmética:
-      - Inicio: belleza-cosmetica/index.md
-      - Maquillaje:
-          - Teoría del maquillaje: belleza-cosmetica/maquillaje/maquillaje_teoria.md
-          - Reviews de productos de maquillaje que he usado: belleza-cosmetica/maquillaje/maquillaje_reviews.md
-          - Recopilación de productos de maquillaje: belleza-cosmetica/maquillaje/maquillaje_productos.md
-      - Skincare:
-          - Teoría del skincare: belleza-cosmetica/skincare/skincare_teoria.md
-          - Reviews de productos de skincare que he usado: belleza-cosmetica/skincare/skincare_reviews.md
-          - Recopilación de productos de skincare: belleza-cosmetica/skincare/skincare_productos.md
-      - Cabello:
-          - Teoría del cabello: belleza-cosmetica/cabello/cabello_teoria.md
-          - Reviews de productos de cabello que he usado: belleza-cosmetica/cabello/cabello_reviews.md
-          - Recopilación de productos de cabello: belleza-cosmetica/cabello/cabello_productos.md
+  - Belleza y cosmética: belleza-cosmetica/index.md
   - Leyes y finanzas: leyes-finanzas/index.md
   - Hogar y lifestyle: hogar-lifestyle/index.md
   - Web: web/index.md
+
+plugins:
+  - search:
+      lang: es
+
+hooks:
+  - hooks/busqueda_tildes.py

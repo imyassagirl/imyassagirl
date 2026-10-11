@@ -1,3 +1,4 @@
+
 <a class="back-arrow" href="../">←</a>
 
 <div class="beauty-page">
@@ -5,7 +6,7 @@
   <div class="beauty-intro">
     <h1>Salud</h1>
     <p>
-      Cosas que he ido investigando y que no quiero que se me olviden.
+      Cosas que he tenido que buscar por mi cuenta porque los médicos no ayudan.
     </p>
   </div>
 

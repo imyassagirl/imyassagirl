@@ -1,3 +1,4 @@
+
 <div class="beauty-page">
 <a class="back-arrow" href="/">←</a>
 

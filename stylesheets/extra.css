@@ -686,27 +686,91 @@ body:has(.iyg-hero) .md-content {
 }
 
 
-/* Ajuste visual exclusivo de la portada */
-body:has(.iyg-hero) .iyg-hero,
-body:has(.iyg-hero) .iyg-sections {
-  position: relative;
-  left: clamp(0px, 6vw, 130px);
+/* Ajuste visual exclusivo de la portada (solo escritorio) */
+@media screen and (min-width: 76.25em) {
+  body:has(.iyg-hero) .iyg-hero,
+  body:has(.iyg-hero) .iyg-sections {
+    position: relative;
+    left: clamp(0px, 6vw, 130px);
+  }
 }
-
 
 /* ========================================
    CENTRADO DE ÍNDICES DE SECCIONES
    ======================================== */
 
 /* Desplazar el bloque completo sin cambiar el espacio de Material */
-body:has(.beauty-page) .beauty-page,
-body:has(.beauty-subpage) .beauty-subpage {
-  position: relative;
-  left: clamp(0px, 6vw, 130px);
+@media screen and (min-width: 76.25em) {
+  body:has(.beauty-page) .beauty-page,
+  body:has(.beauty-subpage) .beauty-subpage {
+    position: relative;
+    left: clamp(0px, 6vw, 130px);
+  }
 }
-
 /* Centrar las descripciones debajo de los títulos */
 body:has(.beauty-page) .beauty-intro p,
 body:has(.beauty-subpage) .beauty-intro p {
   text-align: center;
+}
+
+/* ========================================
+   MENÚ LATERAL: corrección solo para móvil
+   ======================================== */
+
+@media screen and (max-width: 76.1875em) {
+  .md-sidebar--primary {
+    left: 0 !important;
+  }
+}
+
+/* Ocultar el logo en la cabecera del menú desplegable (solo móvil) */
+@media screen and (max-width: 76.1875em) {
+  .md-sidebar--primary .md-nav--primary > .md-nav__title .md-logo {
+    display: none;
+  }
+}
+
+/* Índice flotante compacto en ordenador y móvil */
+.iyg-toc {
+  top: auto;
+  right: 1rem;
+  bottom: 1.25rem;
+  z-index: 90;
+}
+
+.iyg-toc__toggle {
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border-radius: 50%;
+  background: var(--iyg-primary);
+  color: var(--iyg-bg);
+  border: none;
+  box-shadow: 0 4px 14px rgba(46, 34, 51, 0.22);
+}
+
+.iyg-toc__toggle > .ti {
+  color: var(--iyg-bg);
+  font-size: 1.35rem;
+}
+
+.iyg-toc__toggle span,
+.iyg-toc__chevron {
+  display: none;
+}
+
+.iyg-toc__panel {
+  top: auto;
+  bottom: calc(100% + 0.65rem);
+  right: 0;
+  width: min(18rem, calc(100vw - 2rem));
+  max-height: 55vh;
+  overflow-y: auto;
+}
+
+@media screen and (min-width: 701px) {
+  .iyg-toc__panel {
+    width: min(22rem, calc(100vw - 2rem));
+    max-height: 65vh;
+  }
 }

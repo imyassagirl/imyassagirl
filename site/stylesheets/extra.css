@@ -142,11 +142,19 @@ body, .md-typeset {
   line-height: 1.7;
 }
 
+
 .beauty-sections {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.2rem;
+  justify-content: center;
 }
+
+/* Centrar la descripción de cada sección */
+.beauty-intro p {
+  text-align: center;
+}
+
 
 .beauty-section-card {
   display: flex;
@@ -394,7 +402,7 @@ body, .md-typeset {
 /* Artículos centrados y cómodos de leer */
 .md-content {
   min-width: 0;
-  max-width: 900px;
+  max-width: 950px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -433,7 +441,6 @@ body, .md-typeset {
 }
 
 
-/* Centrar el menú horizontal superior */
 /* Centrar el menú horizontal superior */
 .md-tabs__list {
   justify-content: center;
@@ -522,3 +529,174 @@ body.iyg-nav-open {
   grid-template-columns: minmax(0, 1fr) !important;
 }
 
+/* ========================================
+   ÍNDICE DE CONTENIDOS DESPLEGABLE
+   ======================================== */
+
+/* Ocultar el índice lateral original de Material */
+.md-sidebar--secondary.iyg-toc-sidebar-hidden {
+  display: none !important;
+}
+
+/* El contenido principal ocupa el espacio disponible */
+.md-main__inner:has(.iyg-toc-sidebar-hidden) {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+/* Contenedor del índice desplegable */
+.iyg-toc {
+  position: fixed;
+  top: 5.5rem;
+  right: clamp(1rem, 3vw, 3rem);
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  z-index: 90;
+}
+
+/* Botón discreto */
+.iyg-toc__toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid rgba(91, 42, 77, 0.18);
+  border-radius: 999px;
+  background: var(--iyg-bg);
+  color: var(--iyg-primary);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.iyg-toc__toggle:hover,
+.iyg-toc--open .iyg-toc__toggle {
+  background: var(--iyg-surface);
+  border-color: var(--iyg-accent);
+}
+
+.iyg-toc__toggle > .ti {
+  color: var(--iyg-accent);
+  font-size: 1rem;
+}
+
+/* Girar la flecha cuando el índice está abierto */
+.iyg-toc__chevron {
+  transition: transform 0.2s ease;
+}
+
+.iyg-toc--open .iyg-toc__chevron {
+  transform: rotate(180deg);
+}
+
+/* Panel desplegable */
+.iyg-toc__panel {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  width: min(22rem, calc(100vw - 2rem));
+  max-height: min(65vh, 30rem);
+  overflow-y: auto;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(91, 42, 77, 0.12);
+  border-radius: 14px;
+  background: var(--iyg-bg);
+  box-shadow: 0 8px 28px rgba(46, 34, 51, 0.12);
+}
+
+/* Respetar el atributo hidden para que no haya saltos */
+.iyg-toc__panel[hidden] {
+  display: none !important;
+}
+
+/* Enlaces del índice */
+.iyg-toc__panel .md-nav {
+  font-size: 0.78rem;
+}
+
+.iyg-toc__panel .md-nav__link {
+  color: var(--iyg-text);
+}
+
+.iyg-toc__panel .md-nav__link:hover,
+.iyg-toc__panel .md-nav__link--active {
+  color: var(--iyg-accent);
+}
+
+/* Enlaces cómodos de pulsar en móvil */
+@media screen and (max-width: 600px) {
+  .iyg-toc {
+    margin-bottom: 1.2rem;
+  }
+
+  .iyg-toc__toggle {
+    padding: 0.6rem 0.85rem;
+  }
+}
+
+
+/* ========================================
+   JUSTIFICAR LOS TEXTOS
+   ======================================== */
+
+.md-typeset p,
+.md-typeset li {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+
+
+/* ========================================
+   AJUSTE DE CENTRADO DE LA PORTADA
+   ======================================== */
+
+body:has(.iyg-hero) .md-content {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.iyg-hero,
+.iyg-sections {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.iyg-hero {
+  text-align: center;
+}
+
+.iyg-sections {
+  justify-content: center;
+}
+
+
+/* Ajuste visual exclusivo de la portada */
+body:has(.iyg-hero) .iyg-hero,
+body:has(.iyg-hero) .iyg-sections {
+  position: relative;
+  left: clamp(0px, 6vw, 130px);
+}
+
+
+/* ========================================
+   CENTRADO DE ÍNDICES DE SECCIONES
+   ======================================== */
+
+/* Desplazar el bloque completo sin cambiar el espacio de Material */
+body:has(.beauty-page) .beauty-page,
+body:has(.beauty-subpage) .beauty-subpage {
+  position: relative;
+  left: clamp(0px, 6vw, 130px);
+}
+
+/* Centrar las descripciones debajo de los títulos */
+body:has(.beauty-page) .beauty-intro p,
+body:has(.beauty-subpage) .beauty-intro p {
+  text-align: center;
+}
